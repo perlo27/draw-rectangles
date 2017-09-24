@@ -86,7 +86,6 @@ class RectanglePropsForm extends Component {
   };
 
   render() {
-    console.log(this.state.notFilledRequiredFields);
     return (
       <div className="rectangle-form-wrapper">
         <div className="row">
