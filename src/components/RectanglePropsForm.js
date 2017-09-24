@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Field from './Field';
 import { validateSize, validatePosition, isRequiredFieldsFilled } from '../helpers/validators';
 import { requiredFieldError } from '../helpers/errors';
@@ -122,5 +123,18 @@ class RectanglePropsForm extends Component {
     );
   }
 }
+
+RectanglePropsForm.propTypes = {
+  isAllowedToAddRectangle: PropTypes.bool.isRequired,
+  rectangles: PropTypes.arrayOf(PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  })).isRequired,
+  availableWidth: PropTypes.number.isRequired,
+  addRectangle: PropTypes.func.isRequired,
+};
+
 
 export default RectanglePropsForm;

@@ -38,11 +38,6 @@ class MyRect extends Component {
     saveRectangles(updatedRectanglesArray);
   };
 
-  updateAvailableWidth = width => {
-    const { availableWidth } = this.state;
-    this.setState({ availableWidth: availableWidth - width });
-  };
-
   allowedToAddRectangleCount = () => {
     const { availableRectanglesCount, availableWidth } = this.state;
     return availableWidth ? availableRectanglesCount : 0;
@@ -54,11 +49,10 @@ class MyRect extends Component {
       <div>
         <div className="row controls-wrapper">
           <RectanglePropsForm
-            isAllowedToAddRectangle={this.allowedToAddRectangleCount()}
+            isAllowedToAddRectangle={!!this.allowedToAddRectangleCount()}
             rectangles={rectangles}
             availableWidth={availableWidth}
             addRectangle={this.addRectangle}
-            updateAvailableWidth={this.updateAvailableWidth}
           />
           <div className="info-wrapper">
             <Info
