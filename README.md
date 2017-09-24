@@ -1,3 +1,5 @@
+Install dependencies with yarn (or npm i)
+
 To start app:
 yarn start (or npm start)
 
