@@ -1,10 +1,11 @@
 .rectangles-wrapper {
   position: relative;
   width: 100vh;
-  height: 85vh;
+  height: 80vh;
 }
 .controls-wrapper {
-  height: 15vh;
+  height: 19vh;
+  margin-bottom: 1vh;
 }
 
 .rectangle {
@@ -87,7 +88,7 @@
 }
 
 @media print {
-  .wrapper {
+  .rectangles-wrapper {
     box-shadow:  inset 100vw 100vh #faa;
   }
 }

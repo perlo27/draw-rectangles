@@ -64,6 +64,7 @@ class MyRect extends Component {
             <Info
               availableWidth={availableWidth}
               allowedToAddRectangleCount={this.allowedToAddRectangleCount()}
+              viewportWidth={config.maxWidth}
             />
             <button onClick={this.clearRectangles} className="button button-clear">{labels.CLEAR_BUTTON}</button>
           </div>
